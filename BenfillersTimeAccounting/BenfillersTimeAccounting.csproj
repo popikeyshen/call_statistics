@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDFC799C-37CB-425F-85FE-3DF4FFA6A847}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BenfillersTimeAccounting</RootNamespace>
+    <AssemblyName>BenfillersTimeAccounting</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelLibrary">
+      <HintPath>..\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.93.0\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBenfillerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBenfillerForm.Designer.cs">
+      <DependentUpon>AddBenfillerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddButtonForm.Designer.cs">
+      <DependentUpon>AddButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="import.Designer.cs">
+      <DependentUpon>import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelSegment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelSegment.Designer.cs">
+      <DependentUpon>DelSegment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSegment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSegment.Designer.cs">
+      <DependentUpon>AddSegment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSegmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSegmentForm.Designer.cs">
+      <DependentUpon>AddSegmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BenfillersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenfillersForm.Designer.cs">
+      <DependentUpon>BenfillersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButtonsForm.Designer.cs">
+      <DependentUpon>ButtonsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEngine.cs" />
+    <Compile Include="DelBenfillerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelBenfillerForm.Designer.cs">
+      <DependentUpon>DelBenfillerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelButtonForm.Designer.cs">
+      <DependentUpon>DelButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceiverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiverForm.Designer.cs">
+      <DependentUpon>ReceiverForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddBenfillerForm.resx">
+      <DependentUpon>AddBenfillerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddButtonForm.resx">
+      <DependentUpon>AddButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="import.resx">
+      <DependentUpon>import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelSegment.resx">
+      <DependentUpon>DelSegment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSegment.resx">
+      <DependentUpon>AddSegment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSegmentForm.resx">
+      <DependentUpon>AddSegmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BenfillersForm.resx">
+      <DependentUpon>BenfillersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButtonsForm.resx">
+      <DependentUpon>ButtonsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelBenfillerForm.resx">
+      <DependentUpon>DelBenfillerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelButtonForm.resx">
+      <DependentUpon>DelButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReceiverForm.resx">
+      <DependentUpon>ReceiverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
